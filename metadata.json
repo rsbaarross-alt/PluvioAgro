@@ -1,0 +1,6 @@
+{
+  "name": "PluvioAgro - Gestão Pluviométrica",
+  "description": "Aplicativo profissional para registro e acompanhamento de chuvas em propriedades rurais, fazendas e talhões.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

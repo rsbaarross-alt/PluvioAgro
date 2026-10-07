@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #143D2B;
+  --color-primary-hover: #0F2D1F;
+  --color-primary-dark: #0A2016;
+  --color-primary-subtle: #F0F5F2;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #0f172a;
+  background-color: #F1F4F8;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Global Selection Highlight - Institutional Green */
+::selection {
+  background-color: #143D2B;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: #143D2B;
+  color: #ffffff;
+}
+
+.dark ::selection {
+  background-color: #10b981;
+  color: #042f2e;
+}
+
+.dark ::-moz-selection {
+  background-color: #10b981;
+  color: #042f2e;
+}
+
+/* Global Interactive Accent Color for Checkboxes, Radios, Sliders */
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"] {
+  accent-color: #143D2B;
+}
+
+.dark input[type="checkbox"],
+.dark input[type="radio"],
+.dark input[type="range"] {
+  accent-color: #10b981;
+}
+
+/* Global Form Controls & Focus States */
+:focus-visible {
+  outline-color: #143D2B;
+}
+
+.dark :focus-visible {
+  outline-color: #10b981;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #143D2B;
+  outline-color: #143D2B;
+}
+
+.dark input:focus,
+.dark select:focus,
+.dark textarea:focus {
+  border-color: #10b981;
+  outline-color: #10b981;
+}
+
+.dark body {
+  color: #f1f5f9;
+  background-color: #0b0f17;
+}
+
+/* Safe area padding utilities for mobile notches and bottom home indicator */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+.mb-safe {
+  margin-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Touch manipulation to eliminate 300ms mobile click delay and rubber-band overshoot */
+html, body {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
